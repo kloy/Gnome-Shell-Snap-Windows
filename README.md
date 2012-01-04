@@ -2,6 +2,7 @@
 
 This project was made to fulfill my want to be able to place windows on my desktop in a 4 square like fashion with a keybind. After creating keybinds for these scripts you will be able to place windows in the following ways:
 
+*	Center horizontally maximized
 *	Top horizontally maximized
 *	Bottom horizontally maximized
 *	Left vertically maximized
