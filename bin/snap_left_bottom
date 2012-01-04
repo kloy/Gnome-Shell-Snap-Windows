@@ -1,0 +1,10 @@
+#!/bin/bash
+WIDTH=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 1 -d 'x' `
+HEIGHT=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 2 -d 'x' | cut -f 1 -d 'p'`
+WHALF=$(($WIDTH/2))
+HHALF=$(($HEIGHT/2))
+wmctrl -r :ACTIVE: -b remove,fullscreen
+wmctrl -r :ACTIVE: -b remove,maximized_vert
+wmctrl -r :ACTIVE: -b remove,maximized_horz
+# g,x,y,w,h
+wmctrl -r :ACTIVE: -e 0,0,$HHALF,$WHALF,$HHALF

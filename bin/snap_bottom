@@ -1,0 +1,7 @@
+#!/bin/bash
+HEIGHT=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 2 -d 'x' | cut -f 1 -d 'p'`
+HALF=$(($HEIGHT/2))
+wmctrl -r :ACTIVE: -b remove,maximized_vert,fullscreen
+wmctrl -r :ACTIVE: -b add,maximized_horz
+# g,x,y,w,h
+wmctrl -r :ACTIVE: -e 0,0,$HALF,0,$HALF
